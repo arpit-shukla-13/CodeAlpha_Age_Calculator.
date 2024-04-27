@@ -1,0 +1,116 @@
+
+.cal-base{
+   position: relative;
+   margin: 100px auto 0;
+   width: 800px;
+   height: 500px;
+   background: linear-gradient(0deg,#000,#262626);
+   padding: 20px;
+}
+
+.cal-base::before,
+.cal-base::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ff0000,#ffff00,#fb0094,#0000ff,#00ff00,#ff0000,#ffff00);
+    background-size: 700%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+.cal-base::after{
+    filter: blur(20px);
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+  background-image: linear-gradient(
+    -100deg,
+    #0000ff 0%,
+    #00ff00 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 100% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-box{
+    margin:50px 0px 0px 40px;
+    height: 150px;
+    width: 250px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+   
+    padding: 10px;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 400;
+    color: orange;
+
+}
+input{
+    
+    color: orange;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    
+}
+.button{
+   margin-top: 70px;
+    margin-left: 300px;
+}
+.logo{
+    margin-top:  -290px;
+    margin-left: 570px;
+    font-size: 70px;
+    color: white;
+}
+span{
+    color: cyan;
+    font-size: 20px;
+  
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 400px;
+    height: 300px;
+    width: 400px;
+}
